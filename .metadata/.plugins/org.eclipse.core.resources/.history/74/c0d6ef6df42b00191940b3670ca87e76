@@ -1,0 +1,157 @@
+/*
+ * source.cpp
+ *
+ *  Created on: Feb 8, 2019
+ *      Author: hhazl
+ */
+#include <iostream>
+#include <string>
+#include <fstream>
+
+using namespace std;
+
+enum direction{LEFT_RIGHT, RIGHT_LEFT, DOWN, UP, RIGHT_DOWN, RIGHT_UP, LEFT_DOWN, LEFT_UP};
+
+const int MAX = 50;
+
+struct wordGame{
+	int version;
+	int numberRows;
+	int numberColumns;
+	char puzzle[MAX][MAX];
+};
+
+struct wordFind{
+	string word;
+	bool found;
+	int row;
+	int column;
+	direction where;
+	int foundCount;
+};
+
+bool readPuzzle(wordGame &game, string inputFileName){
+	ifstream inFS;
+	inFS.open(inputFileName);
+	if(!inFS){
+		inFS.close();
+		return false;
+	}
+
+	inFS >> game.numberRows;
+	string charList[game.numberRows];
+	inFS >> game.numberColumns;
+
+	for (int i = 0; i < game.numberRows; i++){
+		inFS >> charList[i];
+	}
+	inFS.close();
+
+	for (int i = 0; i < game.numberRows; i++){
+		for (int j = 0; j < game.numberColumns; j++){
+			game.puzzle[i][j] = charList[i].at(j);
+		}
+	}
+
+	game.version = 1;
+	return true;
+
+}
+
+void displayPuzzle(wordGame &game){
+	for (int i = 0; i < game.numberRows; i++){
+		for (int j = 0; j < game.numberColumns; j++){
+			cout << game.puzzle[i][j];
+		}
+		cout << endl;
+	}
+	return;
+}
+
+
+void findWord(wordGame &game, wordFind &theFind){
+	int wordLength;
+	theFind.foundCount = 0;
+	theFind.found = false;
+
+	wordLength = theFind.word.length();
+
+	if (game.numberColumns >= wordLength){
+		for (int i = 0; i < game.numberRows; i++){
+			for (int j = 0; j < game.numberColumns - wordLength; j++){
+				for (int k = 0; k < wordLength; k++){
+					if (game.puzzle[i][j + k] != theFind.word.at(k)){
+						break;
+					}
+					else if (k == wordLength - 1){
+						theFind.found = true;
+						theFind.foundCount += 1;
+						theFind.row = i + 1;
+						theFind.column = j + 1;
+						theFind.where = LEFT_RIGHT;
+					}
+				}
+			}
+			for (int j = game.numberColumns - 1; j >= wordLength; j--){
+				for (int k = 0; k < wordLength; k++){
+					if (game.puzzle[i][j - k] != theFind.word.at(k)){
+						break;
+					}
+					else if (k == wordLength - 1){
+						theFind.found = true;
+						theFind.foundCount += 1;
+						theFind.row = i + 1;
+						theFind.column = j + 1;
+						theFind.where = RIGHT_LEFT;
+					}
+				}
+			}
+		}
+	}
+	if (game.numberRows >= wordLength){
+		for (int i = 0; i < game.numberColumns; i++){
+			for (int j = 0; j < game.numberRows - wordLength; j++){
+				for (int k = 0; k < wordLength; k++){
+					if (game.puzzle[j + k][i] != theFind.word.at(k)){
+						break;
+					}
+					else if(k == wordLength - 1){
+						theFind.found = true;
+						theFind.foundCount += 1;
+						theFind.row = j + 1;
+						theFind.column = i + 1;
+						theFind.where = DOWN;
+						cout << theFind.row << endl;
+						cout << theFind.column << endl;
+					}
+				}
+			}
+		}
+	}
+}
+
+int main(){
+	ifstream inFS;
+	string firstInput;
+	string secondInput;
+	wordGame game;
+	wordFind wordToFind;
+
+	cin >> firstInput;
+
+	if (readPuzzle(game, firstInput)){
+		cout << "The puzzle from file \"" << firstInput << "\"" << endl;
+		displayPuzzle(game);
+	}
+
+	cin >> secondInput;
+	inFS.open(secondInput);
+	if (!inFS){
+		cout << "fuck" << endl;
+	}
+	while (inFS >> wordToFind.word){
+		findWord(game, wordToFind);
+	}
+
+	return 0;
+}
