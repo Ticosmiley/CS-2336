@@ -1,449 +1,1347 @@
+15:18:28 **** Rebuild of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menuList.o" "..\\src\\menuList.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\addUpdateCommand.o" "..\\src\\addUpdateCommand.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\assignment2.o" "..\\src\\assignment2.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\eraseCommand.o" "..\\src\\eraseCommand.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\phoneBook.o" "..\\src\\phoneBook.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\bookCommand.o" "..\\src\\bookCommand.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\testmenu.o" "..\\src\\testmenu.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\phoneBookEntry.o" "..\\src\\phoneBookEntry.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\printCommand.o" "..\\src\\printCommand.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" "src\\testmenu.o" 
 Info: Nothing to build for Project 1
-15:25:30 **** Incremental Build of configuration Debug for project Project 1 ****
+Info: Nothing to build for Project 2
+Info: Nothing to build for Project 2
+Info: Nothing to build for Project 2
+Info: Nothing to build for Project 2
+15:58:53 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-Info: Nothing to build for Project 1
-15:26:16 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\phoneBookEntry.o" "..\\src\\phoneBookEntry.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menuList.o" "..\\src\\menuList.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" "src\\testmenu.o" 
+16:45:44 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-15:29:37 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\phoneBookEntry.o" "..\\src\\phoneBookEntry.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\phoneBook.o" "..\\src\\phoneBook.cpp" 
+..\src\phoneBook.cpp: In member function 'void phoneBook::insert(const phoneBookEntry&)':
+..\src\phoneBook.cpp:8:71: error: 'std::__cxx11::string phoneBookEntry::nameVal' is private within this context
+  int it = std::find(phoneBookList.begin(), phoneBookList.end(), entry.nameVal);
+                                                                       ^~~~~~~
+In file included from ..\src\phoneBook.h:5:0,
+                 from ..\src\phoneBook.cpp:2:
+..\src\phoneBookEntry.h:23:15: note: declared private here
+   std::string nameVal;
+               ^~~~~~~
+..\src\phoneBook.cpp:8:78: error: cannot convert '__gnu_cxx::__normal_iterator<phoneBookEntry*, std::vector<phoneBookEntry> >' to 'int' in initialization
+  int it = std::find(phoneBookList.begin(), phoneBookList.end(), entry.nameVal);
+                                                                              ^
+..\src\phoneBook.cpp:10:9: error: no match for 'operator==' (operand types are 'int' and 'std::vector<phoneBookEntry>::iterator {aka __gnu_cxx::__normal_iterator<phoneBookEntry*, std::vector<phoneBookEntry> >}')
+  if (it == phoneBookList.end()){
+      ~~~^~~~~~~~~~~~~~~~~~~~~~
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h:33:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:46,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/vector:61,
+                 from ..\src\phoneBook.h:4,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ext/new_allocator.h:155:5: note: candidate: template<class _Tp> bool __gnu_cxx::operator==(const __gnu_cxx::new_allocator<_Tp>&, const __gnu_cxx::new_allocator<_Tp>&)
+     operator==(const new_allocator<_Tp>&, const new_allocator<_Tp>&)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ext/new_allocator.h:155:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:30: note:   mismatched types 'const __gnu_cxx::new_allocator<_Tp>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:866:5: note: candidate: template<class _Iterator, class _Container> bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+     operator==(const __normal_iterator<_Iterator, _Container>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:866:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:30: note:   mismatched types 'const __gnu_cxx::__normal_iterator<_Iterator, _Container>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:859:5: note: candidate: template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)
+     operator==(const __normal_iterator<_IteratorL, _Container>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:859:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:30: note:   mismatched types 'const __gnu_cxx::__normal_iterator<_IteratorL, _Container>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:52:0,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6031:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6031:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:30: note:   mismatched types 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:52:0,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6019:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator==(const _CharT* __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6019:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:30: note:   mismatched types 'const _CharT*' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:52:0,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6005:5: note: candidate: template<class _CharT> typename __gnu_cxx::__enable_if<std::__is_char<_Tp>::__value, bool>::__type std::operator==(const std::__cxx11::basic_string<_CharT>&, const std::__cxx11::basic_string<_CharT>&)
+     operator==(const basic_string<_CharT>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6005:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:30: note:   mismatched types 'const std::__cxx11::basic_string<_CharT>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:52:0,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:5997:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:5997:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:30: note:   mismatched types 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/char_traits.h:40:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:40,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/postypes.h:216:5: note: candidate: template<class _StateT> bool std::operator==(const std::fpos<_StateT>&, const std::fpos<_StateT>&)
+     operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/postypes.h:216:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:30: note:   mismatched types 'const std::fpos<_StateT>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/vector:64:0,
+                 from ..\src\phoneBook.h:4,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_vector.h:1596:5: note: candidate: template<class _Tp, class _Alloc> bool std::operator==(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
+     operator==(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_vector.h:1596:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:30: note:   mismatched types 'const std::vector<_Tp, _Alloc>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/vector:61:0,
+                 from ..\src\phoneBook.h:4,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:152:5: note: candidate: template<class _Tp> bool std::operator==(const std::allocator<_Tp>&, const std::allocator<_Tp>&)
+     operator==(const allocator<_Tp>&, const allocator<_Tp>&)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:152:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:30: note:   mismatched types 'const std::allocator<_Tp>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/vector:61:0,
+                 from ..\src\phoneBook.h:4,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:146:5: note: candidate: template<class _T1, class _T2> bool std::operator==(const std::allocator<_Tp>&, const std::allocator<_Tp>&)
+     operator==(const allocator<_T1>&, const allocator<_T2>&)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:146:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:30: note:   mismatched types 'const std::allocator<_Tp>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:1124:5: note: candidate: template<class _Iterator> bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)
+     operator==(const move_iterator<_Iterator>& __x,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:1124:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:30: note:   mismatched types 'const std::move_iterator<_IteratorL>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:1118:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)
+     operator==(const move_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:1118:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:30: note:   mismatched types 'const std::move_iterator<_IteratorL>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:337:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator==(const reverse_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:337:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:30: note:   mismatched types 'const std::reverse_iterator<_Iterator>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:299:5: note: candidate: template<class _Iterator> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator==(const reverse_iterator<_Iterator>& __x,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:299:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:30: note:   mismatched types 'const std::reverse_iterator<_Iterator>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/utility:70:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:60,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_pair.h:443:5: note: candidate: template<class _T1, class _T2> constexpr bool std::operator==(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_pair.h:443:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:30: note:   mismatched types 'const std::pair<_T1, _T2>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+..\src\phoneBook.cpp: In member function 'void phoneBook::insert(const string&, const string&, const string&)':
+..\src\phoneBook.cpp:20:69: error: cannot convert '__gnu_cxx::__normal_iterator<phoneBookEntry*, std::vector<phoneBookEntry> >' to 'int' in initialization
+  int it = std::find(phoneBookList.begin(), phoneBookList.end(), name);
+                                                                     ^
+..\src\phoneBook.cpp:23:9: error: no match for 'operator==' (operand types are 'int' and 'std::vector<phoneBookEntry>::iterator {aka __gnu_cxx::__normal_iterator<phoneBookEntry*, std::vector<phoneBookEntry> >}')
+  if (it == phoneBookList.end()){
+      ~~~^~~~~~~~~~~~~~~~~~~~~~
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h:33:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:46,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/vector:61,
+                 from ..\src\phoneBook.h:4,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ext/new_allocator.h:155:5: note: candidate: template<class _Tp> bool __gnu_cxx::operator==(const __gnu_cxx::new_allocator<_Tp>&, const __gnu_cxx::new_allocator<_Tp>&)
+     operator==(const new_allocator<_Tp>&, const new_allocator<_Tp>&)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ext/new_allocator.h:155:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:23:30: note:   mismatched types 'const __gnu_cxx::new_allocator<_Tp>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:866:5: note: candidate: template<class _Iterator, class _Container> bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+     operator==(const __normal_iterator<_Iterator, _Container>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:866:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:23:30: note:   mismatched types 'const __gnu_cxx::__normal_iterator<_Iterator, _Container>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:859:5: note: candidate: template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)
+     operator==(const __normal_iterator<_IteratorL, _Container>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:859:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:23:30: note:   mismatched types 'const __gnu_cxx::__normal_iterator<_IteratorL, _Container>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:52:0,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6031:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6031:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:23:30: note:   mismatched types 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:52:0,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6019:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator==(const _CharT* __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6019:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:23:30: note:   mismatched types 'const _CharT*' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:52:0,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6005:5: note: candidate: template<class _CharT> typename __gnu_cxx::__enable_if<std::__is_char<_Tp>::__value, bool>::__type std::operator==(const std::__cxx11::basic_string<_CharT>&, const std::__cxx11::basic_string<_CharT>&)
+     operator==(const basic_string<_CharT>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6005:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:23:30: note:   mismatched types 'const std::__cxx11::basic_string<_CharT>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:52:0,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:5997:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:5997:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:23:30: note:   mismatched types 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/char_traits.h:40:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:40,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/postypes.h:216:5: note: candidate: template<class _StateT> bool std::operator==(const std::fpos<_StateT>&, const std::fpos<_StateT>&)
+     operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/postypes.h:216:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:23:30: note:   mismatched types 'const std::fpos<_StateT>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/vector:64:0,
+                 from ..\src\phoneBook.h:4,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_vector.h:1596:5: note: candidate: template<class _Tp, class _Alloc> bool std::operator==(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
+     operator==(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_vector.h:1596:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:23:30: note:   mismatched types 'const std::vector<_Tp, _Alloc>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/vector:61:0,
+                 from ..\src\phoneBook.h:4,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:152:5: note: candidate: template<class _Tp> bool std::operator==(const std::allocator<_Tp>&, const std::allocator<_Tp>&)
+     operator==(const allocator<_Tp>&, const allocator<_Tp>&)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:152:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:23:30: note:   mismatched types 'const std::allocator<_Tp>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/vector:61:0,
+                 from ..\src\phoneBook.h:4,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:146:5: note: candidate: template<class _T1, class _T2> bool std::operator==(const std::allocator<_Tp>&, const std::allocator<_Tp>&)
+     operator==(const allocator<_T1>&, const allocator<_T2>&)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:146:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:23:30: note:   mismatched types 'const std::allocator<_Tp>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:1124:5: note: candidate: template<class _Iterator> bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)
+     operator==(const move_iterator<_Iterator>& __x,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:1124:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:23:30: note:   mismatched types 'const std::move_iterator<_IteratorL>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:1118:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)
+     operator==(const move_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:1118:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:23:30: note:   mismatched types 'const std::move_iterator<_IteratorL>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:337:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator==(const reverse_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:337:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:23:30: note:   mismatched types 'const std::reverse_iterator<_Iterator>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:299:5: note: candidate: template<class _Iterator> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator==(const reverse_iterator<_Iterator>& __x,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:299:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:23:30: note:   mismatched types 'const std::reverse_iterator<_Iterator>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/utility:70:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:60,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_pair.h:443:5: note: candidate: template<class _T1, class _T2> constexpr bool std::operator==(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_pair.h:443:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:23:30: note:   mismatched types 'const std::pair<_T1, _T2>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+..\src\phoneBook.cpp: In member function 'void phoneBook::insert(const string&, const string&)':
+..\src\phoneBook.cpp:33:69: error: cannot convert '__gnu_cxx::__normal_iterator<phoneBookEntry*, std::vector<phoneBookEntry> >' to 'int' in initialization
+  int it = std::find(phoneBookList.begin(), phoneBookList.end(), name);
+                                                                     ^
+..\src\phoneBook.cpp:36:9: error: no match for 'operator==' (operand types are 'int' and 'std::vector<phoneBookEntry>::iterator {aka __gnu_cxx::__normal_iterator<phoneBookEntry*, std::vector<phoneBookEntry> >}')
+  if (it == phoneBookList.end()){
+      ~~~^~~~~~~~~~~~~~~~~~~~~~
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h:33:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:46,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/vector:61,
+                 from ..\src\phoneBook.h:4,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ext/new_allocator.h:155:5: note: candidate: template<class _Tp> bool __gnu_cxx::operator==(const __gnu_cxx::new_allocator<_Tp>&, const __gnu_cxx::new_allocator<_Tp>&)
+     operator==(const new_allocator<_Tp>&, const new_allocator<_Tp>&)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ext/new_allocator.h:155:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:36:30: note:   mismatched types 'const __gnu_cxx::new_allocator<_Tp>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:866:5: note: candidate: template<class _Iterator, class _Container> bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+     operator==(const __normal_iterator<_Iterator, _Container>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:866:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:36:30: note:   mismatched types 'const __gnu_cxx::__normal_iterator<_Iterator, _Container>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:859:5: note: candidate: template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)
+     operator==(const __normal_iterator<_IteratorL, _Container>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:859:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:36:30: note:   mismatched types 'const __gnu_cxx::__normal_iterator<_IteratorL, _Container>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:52:0,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6031:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6031:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:36:30: note:   mismatched types 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:52:0,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6019:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator==(const _CharT* __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6019:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:36:30: note:   mismatched types 'const _CharT*' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:52:0,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6005:5: note: candidate: template<class _CharT> typename __gnu_cxx::__enable_if<std::__is_char<_Tp>::__value, bool>::__type std::operator==(const std::__cxx11::basic_string<_CharT>&, const std::__cxx11::basic_string<_CharT>&)
+     operator==(const basic_string<_CharT>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6005:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:36:30: note:   mismatched types 'const std::__cxx11::basic_string<_CharT>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:52:0,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:5997:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:5997:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:36:30: note:   mismatched types 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/char_traits.h:40:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:40,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/postypes.h:216:5: note: candidate: template<class _StateT> bool std::operator==(const std::fpos<_StateT>&, const std::fpos<_StateT>&)
+     operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/postypes.h:216:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:36:30: note:   mismatched types 'const std::fpos<_StateT>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/vector:64:0,
+                 from ..\src\phoneBook.h:4,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_vector.h:1596:5: note: candidate: template<class _Tp, class _Alloc> bool std::operator==(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
+     operator==(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_vector.h:1596:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:36:30: note:   mismatched types 'const std::vector<_Tp, _Alloc>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/vector:61:0,
+                 from ..\src\phoneBook.h:4,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:152:5: note: candidate: template<class _Tp> bool std::operator==(const std::allocator<_Tp>&, const std::allocator<_Tp>&)
+     operator==(const allocator<_Tp>&, const allocator<_Tp>&)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:152:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:36:30: note:   mismatched types 'const std::allocator<_Tp>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/vector:61:0,
+                 from ..\src\phoneBook.h:4,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:146:5: note: candidate: template<class _T1, class _T2> bool std::operator==(const std::allocator<_Tp>&, const std::allocator<_Tp>&)
+     operator==(const allocator<_T1>&, const allocator<_T2>&)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:146:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:36:30: note:   mismatched types 'const std::allocator<_Tp>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:1124:5: note: candidate: template<class _Iterator> bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)
+     operator==(const move_iterator<_Iterator>& __x,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:1124:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:36:30: note:   mismatched types 'const std::move_iterator<_IteratorL>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:1118:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)
+     operator==(const move_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:1118:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:36:30: note:   mismatched types 'const std::move_iterator<_IteratorL>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:337:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator==(const reverse_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:337:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:36:30: note:   mismatched types 'const std::reverse_iterator<_Iterator>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:299:5: note: candidate: template<class _Iterator> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator==(const reverse_iterator<_Iterator>& __x,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:299:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:36:30: note:   mismatched types 'const std::reverse_iterator<_Iterator>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/utility:70:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:60,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_pair.h:443:5: note: candidate: template<class _T1, class _T2> constexpr bool std::operator==(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_pair.h:443:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:36:30: note:   mismatched types 'const std::pair<_T1, _T2>' and 'int'
+  if (it == phoneBookList.end()){
+                              ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:71:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/predefined_ops.h: In instantiation of 'bool __gnu_cxx::__ops::_Iter_equals_val<_Value>::operator()(_Iterator) [with _Iterator = __gnu_cxx::__normal_iterator<phoneBookEntry*, std::vector<phoneBookEntry> >; _Value = const std::__cxx11::basic_string<char>]':
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algo.h:120:14:   required from '_RandomAccessIterator std::__find_if(_RandomAccessIterator, _RandomAccessIterator, _Predicate, std::random_access_iterator_tag) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<phoneBookEntry*, std::vector<phoneBookEntry> >; _Predicate = __gnu_cxx::__ops::_Iter_equals_val<const std::__cxx11::basic_string<char> >]'
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algo.h:161:23:   required from '_Iterator std::__find_if(_Iterator, _Iterator, _Predicate) [with _Iterator = __gnu_cxx::__normal_iterator<phoneBookEntry*, std::vector<phoneBookEntry> >; _Predicate = __gnu_cxx::__ops::_Iter_equals_val<const std::__cxx11::basic_string<char> >]'
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algo.h:3907:28:   required from '_IIter std::find(_IIter, _IIter, const _Tp&) [with _IIter = __gnu_cxx::__normal_iterator<phoneBookEntry*, std::vector<phoneBookEntry> >; _Tp = std::__cxx11::basic_string<char>]'
+..\src\phoneBook.cpp:8:78:   required from here
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/predefined_ops.h:241:17: error: no match for 'operator==' (operand types are 'phoneBookEntry' and 'const std::__cxx11::basic_string<char>')
+  { return *__it == _M_value; }
+           ~~~~~~^~~~~~~~~~~
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:859:5: note: candidate: template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)
+     operator==(const __normal_iterator<_IteratorL, _Container>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:859:5: note:   template argument deduction/substitution failed:
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:71:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/predefined_ops.h:241:17: note:   'phoneBookEntry' is not derived from 'const __gnu_cxx::__normal_iterator<_IteratorL, _Container>'
+  { return *__it == _M_value; }
+           ~~~~~~^~~~~~~~~~~
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:866:5: note: candidate: template<class _Iterator, class _Container> bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+     operator==(const __normal_iterator<_Iterator, _Container>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:866:5: note:   template argument deduction/substitution failed:
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:71:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/predefined_ops.h:241:17: note:   'phoneBookEntry' is not derived from 'const __gnu_cxx::__normal_iterator<_Iterator, _Container>'
+  { return *__it == _M_value; }
+           ~~~~~~^~~~~~~~~~~
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h:33:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:46,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/vector:61,
+                 from ..\src\phoneBook.h:4,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ext/new_allocator.h:155:5: note: candidate: template<class _Tp> bool __gnu_cxx::operator==(const __gnu_cxx::new_allocator<_Tp>&, const __gnu_cxx::new_allocator<_Tp>&)
+     operator==(const new_allocator<_Tp>&, const new_allocator<_Tp>&)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ext/new_allocator.h:155:5: note:   template argument deduction/substitution failed:
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:71:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/predefined_ops.h:241:17: note:   'phoneBookEntry' is not derived from 'const __gnu_cxx::new_allocator<_Tp>'
+  { return *__it == _M_value; }
+           ~~~~~~^~~~~~~~~~~
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:52:0,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6031:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6031:5: note:   template argument deduction/substitution failed:
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:71:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/predefined_ops.h:241:17: note:   'phoneBookEntry' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>'
+  { return *__it == _M_value; }
+           ~~~~~~^~~~~~~~~~~
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:52:0,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6019:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator==(const _CharT* __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6019:5: note:   template argument deduction/substitution failed:
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:71:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/predefined_ops.h:241:17: note:   mismatched types 'const _CharT*' and 'phoneBookEntry'
+  { return *__it == _M_value; }
+           ~~~~~~^~~~~~~~~~~
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:52:0,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6005:5: note: candidate: template<class _CharT> typename __gnu_cxx::__enable_if<std::__is_char<_Tp>::__value, bool>::__type std::operator==(const std::__cxx11::basic_string<_CharT>&, const std::__cxx11::basic_string<_CharT>&)
+     operator==(const basic_string<_CharT>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6005:5: note:   template argument deduction/substitution failed:
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:71:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/predefined_ops.h:241:17: note:   'phoneBookEntry' is not derived from 'const std::__cxx11::basic_string<_CharT>'
+  { return *__it == _M_value; }
+           ~~~~~~^~~~~~~~~~~
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:52:0,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:5997:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:5997:5: note:   template argument deduction/substitution failed:
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:71:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/predefined_ops.h:241:17: note:   'phoneBookEntry' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>'
+  { return *__it == _M_value; }
+           ~~~~~~^~~~~~~~~~~
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/char_traits.h:40:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:40,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/postypes.h:216:5: note: candidate: template<class _StateT> bool std::operator==(const std::fpos<_StateT>&, const std::fpos<_StateT>&)
+     operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/postypes.h:216:5: note:   template argument deduction/substitution failed:
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:71:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/predefined_ops.h:241:17: note:   'phoneBookEntry' is not derived from 'const std::fpos<_StateT>'
+  { return *__it == _M_value; }
+           ~~~~~~^~~~~~~~~~~
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/vector:64:0,
+                 from ..\src\phoneBook.h:4,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_vector.h:1596:5: note: candidate: template<class _Tp, class _Alloc> bool std::operator==(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
+     operator==(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_vector.h:1596:5: note:   template argument deduction/substitution failed:
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:71:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/predefined_ops.h:241:17: note:   'phoneBookEntry' is not derived from 'const std::vector<_Tp, _Alloc>'
+  { return *__it == _M_value; }
+           ~~~~~~^~~~~~~~~~~
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/vector:61:0,
+                 from ..\src\phoneBook.h:4,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:152:5: note: candidate: template<class _Tp> bool std::operator==(const std::allocator<_Tp>&, const std::allocator<_Tp>&)
+     operator==(const allocator<_Tp>&, const allocator<_Tp>&)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:152:5: note:   template argument deduction/substitution failed:
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:71:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/predefined_ops.h:241:17: note:   'phoneBookEntry' is not derived from 'const std::allocator<_Tp>'
+  { return *__it == _M_value; }
+           ~~~~~~^~~~~~~~~~~
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/vector:61:0,
+                 from ..\src\phoneBook.h:4,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:146:5: note: candidate: template<class _T1, class _T2> bool std::operator==(const std::allocator<_Tp>&, const std::allocator<_Tp>&)
+     operator==(const allocator<_T1>&, const allocator<_T2>&)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:146:5: note:   template argument deduction/substitution failed:
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:71:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/predefined_ops.h:241:17: note:   'phoneBookEntry' is not derived from 'const std::allocator<_Tp>'
+  { return *__it == _M_value; }
+           ~~~~~~^~~~~~~~~~~
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:1124:5: note: candidate: template<class _Iterator> bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)
+     operator==(const move_iterator<_Iterator>& __x,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:1124:5: note:   template argument deduction/substitution failed:
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:71:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/predefined_ops.h:241:17: note:   'phoneBookEntry' is not derived from 'const std::move_iterator<_IteratorL>'
+  { return *__it == _M_value; }
+           ~~~~~~^~~~~~~~~~~
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:1118:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)
+     operator==(const move_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:1118:5: note:   template argument deduction/substitution failed:
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:71:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/predefined_ops.h:241:17: note:   'phoneBookEntry' is not derived from 'const std::move_iterator<_IteratorL>'
+  { return *__it == _M_value; }
+           ~~~~~~^~~~~~~~~~~
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:337:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator==(const reverse_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:337:5: note:   template argument deduction/substitution failed:
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:71:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/predefined_ops.h:241:17: note:   'phoneBookEntry' is not derived from 'const std::reverse_iterator<_Iterator>'
+  { return *__it == _M_value; }
+           ~~~~~~^~~~~~~~~~~
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:299:5: note: candidate: template<class _Iterator> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator==(const reverse_iterator<_Iterator>& __x,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:299:5: note:   template argument deduction/substitution failed:
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:71:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/predefined_ops.h:241:17: note:   'phoneBookEntry' is not derived from 'const std::reverse_iterator<_Iterator>'
+  { return *__it == _M_value; }
+           ~~~~~~^~~~~~~~~~~
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/utility:70:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:60,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_pair.h:443:5: note: candidate: template<class _T1, class _T2> constexpr bool std::operator==(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_pair.h:443:5: note:   template argument deduction/substitution failed:
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:71:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/predefined_ops.h:241:17: note:   'phoneBookEntry' is not derived from 'const std::pair<_T1, _T2>'
+  { return *__it == _M_value; }
+           ~~~~~~^~~~~~~~~~~
+16:53:21 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-15:29:59 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\phoneBook.o" "..\\src\\phoneBook.cpp" 
+..\src\phoneBook.cpp: In member function 'void phoneBook::insert(const phoneBookEntry&)':
+..\src\phoneBook.cpp:9:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < phoneBookList.size(); i++){
+                  ~~^~~~~~~~~~~~~~~~~~~~~~
+..\src\phoneBook.cpp:10:27: error: no match for 'operator==' (operand types are '__gnu_cxx::__alloc_traits<std::allocator<phoneBookEntry> >::value_type {aka phoneBookEntry}' and 'std::__cxx11::string {aka std::__cxx11::basic_string<char>}')
+   if (phoneBookList.at(i) == entry.getName()){
+       ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:52:0,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6031:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6031:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:44: note:   '__gnu_cxx::__alloc_traits<std::allocator<phoneBookEntry> >::value_type {aka phoneBookEntry}' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>'
+   if (phoneBookList.at(i) == entry.getName()){
+                                            ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:52:0,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6019:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator==(const _CharT* __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6019:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:44: note:   mismatched types 'const _CharT*' and 'phoneBookEntry'
+   if (phoneBookList.at(i) == entry.getName()){
+                                            ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:52:0,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6005:5: note: candidate: template<class _CharT> typename __gnu_cxx::__enable_if<std::__is_char<_Tp>::__value, bool>::__type std::operator==(const std::__cxx11::basic_string<_CharT>&, const std::__cxx11::basic_string<_CharT>&)
+     operator==(const basic_string<_CharT>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:6005:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:44: note:   '__gnu_cxx::__alloc_traits<std::allocator<phoneBookEntry> >::value_type {aka phoneBookEntry}' is not derived from 'const std::__cxx11::basic_string<_CharT>'
+   if (phoneBookList.at(i) == entry.getName()){
+                                            ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:52:0,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:5997:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.h:5997:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:44: note:   '__gnu_cxx::__alloc_traits<std::allocator<phoneBookEntry> >::value_type {aka phoneBookEntry}' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>'
+   if (phoneBookList.at(i) == entry.getName()){
+                                            ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/char_traits.h:40:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/string:40,
+                 from ..\src\phoneBookEntry.h:4,
+                 from ..\src\phoneBook.h:5,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/postypes.h:216:5: note: candidate: template<class _StateT> bool std::operator==(const std::fpos<_StateT>&, const std::fpos<_StateT>&)
+     operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/postypes.h:216:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:44: note:   '__gnu_cxx::__alloc_traits<std::allocator<phoneBookEntry> >::value_type {aka phoneBookEntry}' is not derived from 'const std::fpos<_StateT>'
+   if (phoneBookList.at(i) == entry.getName()){
+                                            ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/vector:64:0,
+                 from ..\src\phoneBook.h:4,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_vector.h:1596:5: note: candidate: template<class _Tp, class _Alloc> bool std::operator==(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
+     operator==(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_vector.h:1596:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:44: note:   '__gnu_cxx::__alloc_traits<std::allocator<phoneBookEntry> >::value_type {aka phoneBookEntry}' is not derived from 'const std::vector<_Tp, _Alloc>'
+   if (phoneBookList.at(i) == entry.getName()){
+                                            ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/vector:61:0,
+                 from ..\src\phoneBook.h:4,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:152:5: note: candidate: template<class _Tp> bool std::operator==(const std::allocator<_Tp>&, const std::allocator<_Tp>&)
+     operator==(const allocator<_Tp>&, const allocator<_Tp>&)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:152:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:44: note:   '__gnu_cxx::__alloc_traits<std::allocator<phoneBookEntry> >::value_type {aka phoneBookEntry}' is not derived from 'const std::allocator<_Tp>'
+   if (phoneBookList.at(i) == entry.getName()){
+                                            ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/vector:61:0,
+                 from ..\src\phoneBook.h:4,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:146:5: note: candidate: template<class _T1, class _T2> bool std::operator==(const std::allocator<_Tp>&, const std::allocator<_Tp>&)
+     operator==(const allocator<_T1>&, const allocator<_T2>&)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:146:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:44: note:   '__gnu_cxx::__alloc_traits<std::allocator<phoneBookEntry> >::value_type {aka phoneBookEntry}' is not derived from 'const std::allocator<_Tp>'
+   if (phoneBookList.at(i) == entry.getName()){
+                                            ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:1124:5: note: candidate: template<class _Iterator> bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)
+     operator==(const move_iterator<_Iterator>& __x,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:1124:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:44: note:   '__gnu_cxx::__alloc_traits<std::allocator<phoneBookEntry> >::value_type {aka phoneBookEntry}' is not derived from 'const std::move_iterator<_IteratorL>'
+   if (phoneBookList.at(i) == entry.getName()){
+                                            ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:1118:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)
+     operator==(const move_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:1118:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:44: note:   '__gnu_cxx::__alloc_traits<std::allocator<phoneBookEntry> >::value_type {aka phoneBookEntry}' is not derived from 'const std::move_iterator<_IteratorL>'
+   if (phoneBookList.at(i) == entry.getName()){
+                                            ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:337:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator==(const reverse_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:337:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:44: note:   '__gnu_cxx::__alloc_traits<std::allocator<phoneBookEntry> >::value_type {aka phoneBookEntry}' is not derived from 'const std::reverse_iterator<_Iterator>'
+   if (phoneBookList.at(i) == entry.getName()){
+                                            ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:299:5: note: candidate: template<class _Iterator> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator==(const reverse_iterator<_Iterator>& __x,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:299:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:44: note:   '__gnu_cxx::__alloc_traits<std::allocator<phoneBookEntry> >::value_type {aka phoneBookEntry}' is not derived from 'const std::reverse_iterator<_Iterator>'
+   if (phoneBookList.at(i) == entry.getName()){
+                                            ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/utility:70:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:60,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_pair.h:443:5: note: candidate: template<class _T1, class _T2> constexpr bool std::operator==(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_pair.h:443:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:44: note:   '__gnu_cxx::__alloc_traits<std::allocator<phoneBookEntry> >::value_type {aka phoneBookEntry}' is not derived from 'const std::pair<_T1, _T2>'
+   if (phoneBookList.at(i) == entry.getName()){
+                                            ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h:33:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/allocator.h:46,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/vector:61,
+                 from ..\src\phoneBook.h:4,
+                 from ..\src\phoneBook.cpp:2:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ext/new_allocator.h:155:5: note: candidate: template<class _Tp> bool __gnu_cxx::operator==(const __gnu_cxx::new_allocator<_Tp>&, const __gnu_cxx::new_allocator<_Tp>&)
+     operator==(const new_allocator<_Tp>&, const new_allocator<_Tp>&)
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ext/new_allocator.h:155:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:44: note:   '__gnu_cxx::__alloc_traits<std::allocator<phoneBookEntry> >::value_type {aka phoneBookEntry}' is not derived from 'const __gnu_cxx::new_allocator<_Tp>'
+   if (phoneBookList.at(i) == entry.getName()){
+                                            ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:866:5: note: candidate: template<class _Iterator, class _Container> bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+     operator==(const __normal_iterator<_Iterator, _Container>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:866:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:44: note:   '__gnu_cxx::__alloc_traits<std::allocator<phoneBookEntry> >::value_type {aka phoneBookEntry}' is not derived from 'const __gnu_cxx::__normal_iterator<_Iterator, _Container>'
+   if (phoneBookList.at(i) == entry.getName()){
+                                            ^
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algobase.h:67:0,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:61,
+                 from ..\src\phoneBook.cpp:1:
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:859:5: note: candidate: template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)
+     operator==(const __normal_iterator<_IteratorL, _Container>& __lhs,
+     ^~~~~~~~
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:859:5: note:   template argument deduction/substitution failed:
+..\src\phoneBook.cpp:10:44: note:   '__gnu_cxx::__alloc_traits<std::allocator<phoneBookEntry> >::value_type {aka phoneBookEntry}' is not derived from 'const __gnu_cxx::__normal_iterator<_IteratorL, _Container>'
+   if (phoneBookList.at(i) == entry.getName()){
+                                            ^
+..\src\phoneBook.cpp: In member function 'void phoneBook::insert(const string&, const string&, const string&)':
+..\src\phoneBook.cpp:25:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < phoneBookList.size(); i++){
+                  ~~^~~~~~~~~~~~~~~~~~~~~~
+..\src\phoneBook.cpp: In member function 'void phoneBook::insert(const string&, const string&)':
+..\src\phoneBook.cpp:41:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < phoneBookList.size(); i++){
+                  ~~^~~~~~~~~~~~~~~~~~~~~~
+16:53:41 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-Info: Nothing to build for Project 1
-15:31:16 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\phoneBook.o" "..\\src\\phoneBook.cpp" 
+..\src\phoneBook.cpp: In member function 'void phoneBook::insert(const phoneBookEntry&)':
+..\src\phoneBook.cpp:9:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < phoneBookList.size(); i++){
+                  ~~^~~~~~~~~~~~~~~~~~~~~~
+..\src\phoneBook.cpp: In member function 'void phoneBook::insert(const string&, const string&, const string&)':
+..\src\phoneBook.cpp:25:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < phoneBookList.size(); i++){
+                  ~~^~~~~~~~~~~~~~~~~~~~~~
+..\src\phoneBook.cpp: In member function 'void phoneBook::insert(const string&, const string&)':
+..\src\phoneBook.cpp:41:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < phoneBookList.size(); i++){
+                  ~~^~~~~~~~~~~~~~~~~~~~~~
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" "src\\testmenu.o" 
+16:54:01 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-15:32:37 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\phoneBook.o" "..\\src\\phoneBook.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" "src\\testmenu.o" 
+17:02:41 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-15:32:56 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-15:42:36 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-..\src\source.cpp: In function 'int main()':
-..\src\source.cpp:78:16: warning: the address of 'bool readPuzzle(wordGame&, std::__cxx11::string)' will never be NULL [-Waddress]
-  if (readPuzzle){
-                ^
-g++ -o "Project 1.exe" "src\\source.o" 
-15:44:13 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-..\src\source.cpp: In function 'int main()':
-..\src\source.cpp:78:16: warning: the address of 'bool readPuzzle(wordGame&, std::__cxx11::string)' will never be NULL [-Waddress]
-  if (readPuzzle){
-                ^
-g++ -o "Project 1.exe" "src\\source.o" 
-15:44:56 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-..\src\source.cpp: In function 'int main()':
-..\src\source.cpp:78:16: warning: the address of 'bool readPuzzle(wordGame&, std::__cxx11::string)' will never be NULL [-Waddress]
-  if (readPuzzle){
-                ^
-g++ -o "Project 1.exe" "src\\source.o" 
-15:45:53 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-..\src\source.cpp: In function 'int main()':
-..\src\source.cpp:79:16: warning: the address of 'bool readPuzzle(wordGame&, std::__cxx11::string)' will never be NULL [-Waddress]
-  if (readPuzzle){
-                ^
-g++ -o "Project 1.exe" "src\\source.o" 
-15:46:47 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-..\src\source.cpp: In function 'int main()':
-..\src\source.cpp:79:16: warning: the address of 'bool readPuzzle(wordGame&, std::__cxx11::string)' will never be NULL [-Waddress]
-  if (readPuzzle){
-                ^
-g++ -o "Project 1.exe" "src\\source.o" 
-15:47:03 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-..\src\source.cpp: In function 'int main()':
-..\src\source.cpp:79:16: warning: the address of 'bool readPuzzle(wordGame&, std::__cxx11::string)' will never be NULL [-Waddress]
-  if (readPuzzle){
-                ^
-g++ -o "Project 1.exe" "src\\source.o" 
-15:49:56 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-..\src\source.cpp: In function 'int main()':
-..\src\source.cpp:83:16: warning: the address of 'bool readPuzzle(wordGame&, std::__cxx11::string)' will never be NULL [-Waddress]
-  if (readPuzzle){
-                ^
-g++ -o "Project 1.exe" "src\\source.o" 
-Info: Nothing to build for Project 1
-15:51:32 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-..\src\source.cpp: In function 'int main()':
-..\src\source.cpp:85:16: warning: the address of 'bool readPuzzle(wordGame&, std::__cxx11::string)' will never be NULL [-Waddress]
-  if (readPuzzle){
-                ^
-g++ -o "Project 1.exe" "src\\source.o" 
-15:52:07 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-15:52:28 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-16:18:36 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-16:19:17 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-16:20:12 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-..\src\source.cpp: In function 'void findWord(wordGame&, wordFind&)':
-..\src\source.cpp:95:7: error: expected ';' before '}' token
-       }
-       ^
-16:20:26 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-16:21:48 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-16:31:15 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-16:46:13 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-16:47:23 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-16:50:01 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-16:54:02 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-17:01:01 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-17:02:13 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-17:03:57 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-17:08:20 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-17:09:55 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-17:18:36 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-17:20:02 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-17:20:29 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-17:21:14 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-17:23:29 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-17:25:16 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-17:29:01 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-17:41:03 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-Info: Nothing to build for Project 1
-17:43:27 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-17:49:21 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-Info: Nothing to build for Project 1
-Info: Nothing to build for Project 1
-17:52:15 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-17:53:26 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-16:42:56 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-..\src\source.cpp: In function 'bool readPuzzle(wordGame&, std::__cxx11::string)':
-..\src\source.cpp:58:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  if (charList.size() < game.numberRows){
-      ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
-..\src\source.cpp:62:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < charList.size(); i++){
-                  ~~^~~~~~~~~~~~~~~~~
-..\src\source.cpp:63:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-   if (charList.at(i).length() < game.numberColumns){
-       ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
-g++ -o "Project 1.exe" "src\\source.o" 
-16:45:14 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-Info: Nothing to build for Project 1
-16:46:18 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-Info: Nothing to build for Project 1
-Info: Nothing to build for Project 1
-16:52:00 **** Incremental Build of configuration Debug for project Project 1 ****
-Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Project 1.exe: Permission denied
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test.o" "..\\src\\test.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\phoneBook.o" "..\\src\\phoneBook.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" "src\\test.o" "src\\testmenu.o" 
+src\testmenu.o: In function `command::unExecute()':
+D:\School\CS-2336\Project 2\Debug/../src/testmenu.cpp:21: multiple definition of `main'
+src\test.o:D:\School\CS-2336\Project 2\Debug/../src/test.cpp:12: first defined here
 collect2.exe: error: ld returned 1 exit status
-16:52:16 **** Incremental Build of configuration Debug for project Project 1 ****
+17:03:12 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ -o "Project 1.exe" "src\\source.o" 
-C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Project 1.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-16:52:34 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" "src\\test.o" 
+Info: Nothing to build for Project 2
+17:03:36 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ -o "Project 1.exe" "src\\source.o" 
-C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Project 1.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-16:56:39 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test.o" "..\\src\\test.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" "src\\test.o" 
+17:05:45 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-..\src\source.cpp: In function 'bool readPuzzle(wordGame&, std::__cxx11::string)':
-..\src\source.cpp:58:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  if (charList.size() != game.numberRows){
-      ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
-g++ -o "Project 1.exe" "src\\source.o" 
-C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Project 1.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-16:56:54 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test.o" "..\\src\\test.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" "src\\test.o" 
+17:06:34 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ -o "Project 1.exe" "src\\source.o" 
-C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Project 1.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-17:05:10 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test.o" "..\\src\\test.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" "src\\test.o" 
+17:07:30 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Project 1.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-17:05:50 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test.o" "..\\src\\test.cpp" 
+..\src\test.cpp: In function 'int main()':
+..\src\test.cpp:19:20: error: 'std::vector<phoneBookEntry> phoneBook::phoneBookList' is private within this context
+  std::cout << fuck.phoneBookList.at(2).email() << std::endl;
+                    ^~~~~~~~~~~~~
+In file included from ..\src\test.cpp:9:0:
+..\src\phoneBook.h:17:31: note: declared private here
+   std::vector<phoneBookEntry> phoneBookList;
+                               ^~~~~~~~~~~~~
+17:17:31 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Project 1.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-17:06:37 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test.o" "..\\src\\test.cpp" 
+..\src\test.cpp: In function 'int main()':
+..\src\test.cpp:19:20: error: 'std::vector<phoneBookEntry> phoneBook::phoneBookList' is private within this context
+  std::cout << fuck.phoneBookList.at(2).email() << std::endl;
+                    ^~~~~~~~~~~~~
+In file included from ..\src\test.cpp:9:0:
+..\src\phoneBook.h:20:31: note: declared private here
+   std::vector<phoneBookEntry> phoneBookList;
+                               ^~~~~~~~~~~~~
+17:17:49 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Project 1.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-17:07:27 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\phoneBook.o" "..\\src\\phoneBook.cpp" 
+..\src\phoneBook.cpp: In member function 'bool phoneBook::erase(std::__cxx11::string)':
+..\src\phoneBook.cpp:55:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < phoneBookList.size(); i++){
+                  ~~^~~~~~~~~~~~~~~~~~~~~~
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test.o" "..\\src\\test.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" "src\\test.o" 
+17:18:03 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ -o "Project 1.exe" "src\\source.o" 
-C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Project 1.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-17:08:11 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\phoneBook.o" "..\\src\\phoneBook.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" "src\\test.o" 
+17:19:21 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ -o "Project 1.exe" "src\\source.o" 
-C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Project 1.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-17:08:34 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test.o" "..\\src\\test.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\phoneBook.o" "..\\src\\phoneBook.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" "src\\test.o" 
+Info: Nothing to build for Project 2
+17:19:33 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ -o "Project 1.exe" "src\\source.o" 
-17:09:01 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test.o" "..\\src\\test.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" "src\\test.o" 
+17:19:40 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-Info: Nothing to build for Project 1
-17:09:43 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test.o" "..\\src\\test.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" "src\\test.o" 
+17:21:05 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-17:10:12 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\phoneBook.o" "..\\src\\phoneBook.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" "src\\test.o" 
+17:35:29 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-Info: Nothing to build for Project 1
-17:11:19 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\phoneBook.o" "..\\src\\phoneBook.cpp" 
+..\src\phoneBook.cpp: In member function 'bool phoneBook::find(std::__cxx11::string)':
+..\src\phoneBook.cpp:68:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < phoneBookList.size(); i++){
+                  ~~^~~~~~~~~~~~~~~~~~~~~~
+..\src\phoneBook.cpp: In member function 'void phoneBook::print() const':
+..\src\phoneBook.cpp:78:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < phoneBookList.size(); i++){
+                  ~~^~~~~~~~~~~~~~~~~~~~~~
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test.o" "..\\src\\test.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" "src\\test.o" 
+17:35:44 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-Info: Nothing to build for Project 1
-17:12:16 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\phoneBook.o" "..\\src\\phoneBook.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" "src\\test.o" 
+Info: Nothing to build for Project 2
+17:36:00 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-Info: Nothing to build for Project 1
-Info: Nothing to build for Project 1
-17:13:58 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test.o" "..\\src\\test.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" "src\\test.o" 
+17:36:11 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-Info: Nothing to build for Project 1
-Info: Nothing to build for Project 1
-Info: Nothing to build for Project 1
-17:21:56 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test.o" "..\\src\\test.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" "src\\test.o" 
+19:21:01 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-..\src\source.cpp:65:2: warning: "/*" within comment [-Wcomment]
-  /*if (charList.size() < game.numberRows){
-   
-g++ -o "Project 1.exe" "src\\source.o" 
-17:22:54 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\phoneBook.o" "..\\src\\phoneBook.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\assignment2.o" "..\\src\\assignment2.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" 
+19:27:29 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-..\src\source.cpp:66:2: warning: "/*" within comment [-Wcomment]
-  /*if (charList.size() < game.numberRows){
-   
-g++ -o "Project 1.exe" "src\\source.o" 
-17:24:08 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\assignment2.o" "..\\src\\assignment2.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\phoneBook.o" "..\\src\\phoneBook.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" 
+19:27:52 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-..\src\source.cpp:66:2: warning: "/*" within comment [-Wcomment]
-  /*if (charList.size() < game.numberRows){
-   
-g++ -o "Project 1.exe" "src\\source.o" 
-17:25:12 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\assignment2.o" "..\\src\\assignment2.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" 
+19:34:51 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-17:29:45 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\assignment2.o" "..\\src\\assignment2.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\phoneBook.o" "..\\src\\phoneBook.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" 
+20:08:17 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-..\src\source.cpp:66:2: warning: "/*" within comment [-Wcomment]
-  /*if (charList.size() < game.numberRows){
-   
-..\src\source.cpp: In function 'bool readPuzzle(wordGame&, std::__cxx11::string)':
-..\src\source.cpp:54:22: warning: comparison with string literal results in unspecified behavior [-Waddress]
-   if (inFS.peek() == "\n"){
-                      ^~~~
-..\src\source.cpp:54:22: error: ISO C++ forbids comparison between pointer and integer [-fpermissive]
-17:35:01 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\addUpdateCommand.o" "..\\src\\addUpdateCommand.cpp" 
+In file included from ..\src\addUpdateCommand.cpp:1:0:
+..\src\addUpdateCommand.h:1:0: error: unterminated #ifndef
+ #ifndef ADDUPDATECOMMAND_H_
+ 
+..\src\addUpdateCommand.cpp: In constructor 'addUpdateCommand::addUpdateCommand()':
+..\src\addUpdateCommand.cpp:3:36: error: no matching function for call to 'bookCommand::bookCommand()'
+ addUpdateCommand::addUpdateCommand(){
+                                    ^
+In file included from ..\src\addUpdateCommand.h:4:0,
+                 from ..\src\addUpdateCommand.cpp:1:
+..\src\bookCommand.h:9:3: note: candidate: bookCommand::bookCommand(std::istream&, std::ostream&)
+   bookCommand(std::istream &in, std::ostream &out);
+   ^~~~~~~~~~~
+..\src\bookCommand.h:9:3: note:   candidate expects 2 arguments, 0 provided
+..\src\bookCommand.h:7:7: note: candidate: constexpr bookCommand::bookCommand(const bookCommand&)
+ class bookCommand : public command{
+       ^~~~~~~~~~~
+..\src\bookCommand.h:7:7: note:   candidate expects 1 argument, 0 provided
+..\src\bookCommand.h:7:7: note: candidate: constexpr bookCommand::bookCommand(bookCommand&&)
+..\src\bookCommand.h:7:7: note:   candidate expects 1 argument, 0 provided
+..\src\addUpdateCommand.cpp:3:1: error: uninitialized reference member in 'class phoneBook&' [-fpermissive]
+ addUpdateCommand::addUpdateCommand(){
+ ^~~~~~~~~~~~~~~~
+In file included from ..\src\addUpdateCommand.cpp:1:0:
+..\src\addUpdateCommand.h:12:14: note: 'phoneBook& addUpdateCommand::book' should be initialized
+   phoneBook &book;
+              ^~~~
+20:09:38 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-..\src\source.cpp:65:2: warning: "/*" within comment [-Wcomment]
-  /*if (charList.size() < game.numberRows){
-   
-g++ -o "Project 1.exe" "src\\source.o" 
-Info: Nothing to build for Project 1
-17:42:33 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\phoneBook.o" "..\\src\\phoneBook.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\assignment2.o" "..\\src\\assignment2.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\addUpdateCommand.o" "..\\src\\addUpdateCommand.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\bookCommand.o" "..\\src\\bookCommand.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" 
+20:10:05 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Project 1.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-17:42:41 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\addUpdateCommand.o" "..\\src\\addUpdateCommand.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" 
+20:25:51 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ -o "Project 1.exe" "src\\source.o" 
-C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Project 1.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-17:43:18 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\addUpdateCommand.o" "..\\src\\addUpdateCommand.cpp" 
+..\src\addUpdateCommand.cpp: In member function 'virtual void addUpdateCommand::execute()':
+..\src\addUpdateCommand.cpp:11:31: error: expected ')' before '{' token
+  if (book.find(temp.getName()){
+                               ^
+..\src\addUpdateCommand.cpp:15:1: error: expected primary-expression before '}' token
+ }
+ ^
+..\src\addUpdateCommand.cpp:9:7: warning: unused variable 'update' [-Wunused-variable]
+  bool update = false;
+       ^~~~~~
+20:26:10 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ -o "Project 1.exe" "src\\source.o" 
-C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Project 1.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-17:43:26 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\addUpdateCommand.o" "..\\src\\addUpdateCommand.cpp" 
+..\src\addUpdateCommand.cpp: In member function 'virtual void addUpdateCommand::execute()':
+..\src\addUpdateCommand.cpp:9:7: warning: variable 'update' set but not used [-Wunused-but-set-variable]
+  bool update = false;
+       ^~~~~~
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" 
+20:30:10 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ -o "Project 1.exe" "src\\source.o" 
-C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Project 1.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-17:43:27 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\addUpdateCommand.o" "..\\src\\addUpdateCommand.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" 
+20:30:37 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ -o "Project 1.exe" "src\\source.o" 
-C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Project 1.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-17:43:28 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\addUpdateCommand.o" "..\\src\\addUpdateCommand.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" 
+20:32:09 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ -o "Project 1.exe" "src\\source.o" 
-C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Project 1.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-17:43:29 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\assignment2.o" "..\\src\\assignment2.cpp" 
+..\src\assignment2.cpp: In function 'int main()':
+..\src\assignment2.cpp:24:19: error: no matching function for call to 'addUpdateCommand::addUpdateCommand()'
+  addUpdateCommand butt;
+                   ^~~~
+In file included from ..\src\assignment2.cpp:10:0:
+..\src\addUpdateCommand.h:9:3: note: candidate: addUpdateCommand::addUpdateCommand(phoneBook&, std::istream&, std::ostream&)
+   addUpdateCommand(phoneBook &bookIn, std::istream &inStream, std::ostream &outStream);
+   ^~~~~~~~~~~~~~~~
+..\src\addUpdateCommand.h:9:3: note:   candidate expects 3 arguments, 0 provided
+..\src\addUpdateCommand.h:7:7: note: candidate: constexpr addUpdateCommand::addUpdateCommand(const addUpdateCommand&)
+ class addUpdateCommand : public bookCommand{
+       ^~~~~~~~~~~~~~~~
+..\src\addUpdateCommand.h:7:7: note:   candidate expects 1 argument, 0 provided
+..\src\addUpdateCommand.h:7:7: note: candidate: constexpr addUpdateCommand::addUpdateCommand(addUpdateCommand&&)
+..\src\addUpdateCommand.h:7:7: note:   candidate expects 1 argument, 0 provided
+20:32:48 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ -o "Project 1.exe" "src\\source.o" 
-C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Project 1.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-17:43:34 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\assignment2.o" "..\\src\\assignment2.cpp" 
+..\src\assignment2.cpp: In function 'int main()':
+..\src\assignment2.cpp:24:49: error: no matching function for call to 'addUpdateCommand::addUpdateCommand(phoneBook&, std::ostream&, std::istream&)'
+  addUpdateCommand butt(fuck, std::cout, std::cin);
+                                                 ^
+In file included from ..\src\assignment2.cpp:10:0:
+..\src\addUpdateCommand.h:9:3: note: candidate: addUpdateCommand::addUpdateCommand(phoneBook&, std::istream&, std::ostream&)
+   addUpdateCommand(phoneBook &bookIn, std::istream &inStream, std::ostream &outStream);
+   ^~~~~~~~~~~~~~~~
+..\src\addUpdateCommand.h:9:3: note:   no known conversion for argument 2 from 'std::ostream {aka std::basic_ostream<char>}' to 'std::istream& {aka std::basic_istream<char>&}'
+..\src\addUpdateCommand.h:7:7: note: candidate: constexpr addUpdateCommand::addUpdateCommand(const addUpdateCommand&)
+ class addUpdateCommand : public bookCommand{
+       ^~~~~~~~~~~~~~~~
+..\src\addUpdateCommand.h:7:7: note:   candidate expects 1 argument, 3 provided
+..\src\addUpdateCommand.h:7:7: note: candidate: constexpr addUpdateCommand::addUpdateCommand(addUpdateCommand&&)
+..\src\addUpdateCommand.h:7:7: note:   candidate expects 1 argument, 3 provided
+20:33:17 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ -o "Project 1.exe" "src\\source.o" 
-C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Project 1.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-17:43:52 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\assignment2.o" "..\\src\\assignment2.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" 
+Info: Nothing to build for Project 2
+20:34:26 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ -o "Project 1.exe" "src\\source.o" 
-Info: Nothing to build for Project 1
-17:45:56 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\addUpdateCommand.o" "..\\src\\addUpdateCommand.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\assignment2.o" "..\\src\\assignment2.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" 
+20:37:39 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-Info: Nothing to build for Project 1
-17:49:44 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\addUpdateCommand.o" "..\\src\\addUpdateCommand.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" 
+20:38:13 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-..\src\source.cpp: In function 'int main()':
-..\src\source.cpp:249:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     for (int i = 0; i < wordToFind.word.length(); i++){
-                     ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
-g++ -o "Project 1.exe" "src\\source.o" 
-17:50:29 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\assignment2.o" "..\\src\\assignment2.cpp" 
+..\src\assignment2.cpp: In function 'int main()':
+..\src\assignment2.cpp:28:2: error: return-statement with no value, in function returning 'int' [-fpermissive]
+  return;
+  ^~~~~~
+20:38:25 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-17:56:43 **** Incremental Build of configuration Debug for project Project 1 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\assignment2.o" "..\\src\\assignment2.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" 
+20:50:27 **** Incremental Build of configuration Debug for project Project 2 ****
 Info: Internal Builder is used for build
-g++ "-IC:\\MinGW" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\source.o" "..\\src\\source.cpp" 
-g++ -o "Project 1.exe" "src\\source.o" 
-Info: Nothing to build for Project 1
-Info: Nothing to build for Project 1
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\eraseCommand.o" "..\\src\\eraseCommand.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\assignment2.o" "..\\src\\assignment2.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\addUpdateCommand.o" "..\\src\\addUpdateCommand.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" 
+Info: Nothing to build for Project 2
+20:57:34 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\printCommand.o" "..\\src\\printCommand.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\eraseCommand.o" "..\\src\\eraseCommand.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\assignment2.o" "..\\src\\assignment2.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" 
+21:09:05 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\assignment2.o" "..\\src\\assignment2.cpp" 
+..\src\assignment2.cpp: In function 'int main()':
+..\src\assignment2.cpp:11:19: error: no matching function for call to 'addUpdateCommand::addUpdateCommand()'
+  addUpdateCommand addUpdate;
+                   ^~~~~~~~~
+In file included from ..\src\assignment2.cpp:3:0:
+..\src\addUpdateCommand.h:9:3: note: candidate: addUpdateCommand::addUpdateCommand(phoneBook&, std::istream&, std::ostream&)
+   addUpdateCommand(phoneBook &bookIn, std::istream &inStream, std::ostream &outStream);
+   ^~~~~~~~~~~~~~~~
+..\src\addUpdateCommand.h:9:3: note:   candidate expects 3 arguments, 0 provided
+..\src\addUpdateCommand.h:7:7: note: candidate: constexpr addUpdateCommand::addUpdateCommand(const addUpdateCommand&)
+ class addUpdateCommand : public bookCommand{
+       ^~~~~~~~~~~~~~~~
+..\src\addUpdateCommand.h:7:7: note:   candidate expects 1 argument, 0 provided
+..\src\addUpdateCommand.h:7:7: note: candidate: constexpr addUpdateCommand::addUpdateCommand(addUpdateCommand&&)
+..\src\addUpdateCommand.h:7:7: note:   candidate expects 1 argument, 0 provided
+..\src\assignment2.cpp:12:15: error: no matching function for call to 'eraseCommand::eraseCommand()'
+  eraseCommand erase;
+               ^~~~~
+In file included from ..\src\assignment2.cpp:4:0:
+..\src\eraseCommand.h:9:3: note: candidate: eraseCommand::eraseCommand(phoneBook&, std::istream&, std::ostream&)
+   eraseCommand(phoneBook &bookIn, std::istream &inStream, std::ostream &outStream);
+   ^~~~~~~~~~~~
+..\src\eraseCommand.h:9:3: note:   candidate expects 3 arguments, 0 provided
+..\src\eraseCommand.h:7:7: note: candidate: constexpr eraseCommand::eraseCommand(const eraseCommand&)
+ class eraseCommand : public bookCommand{
+       ^~~~~~~~~~~~
+..\src\eraseCommand.h:7:7: note:   candidate expects 1 argument, 0 provided
+..\src\eraseCommand.h:7:7: note: candidate: constexpr eraseCommand::eraseCommand(eraseCommand&&)
+..\src\eraseCommand.h:7:7: note:   candidate expects 1 argument, 0 provided
+..\src\assignment2.cpp:13:15: error: no matching function for call to 'printCommand::printCommand()'
+  printCommand print;
+               ^~~~~
+In file included from ..\src\assignment2.cpp:5:0:
+..\src\printCommand.h:9:3: note: candidate: printCommand::printCommand(phoneBook&, std::istream&, std::ostream&)
+   printCommand(phoneBook &bookIn, std::istream &inStream, std::ostream &outStream);
+   ^~~~~~~~~~~~
+..\src\printCommand.h:9:3: note:   candidate expects 3 arguments, 0 provided
+..\src\printCommand.h:7:7: note: candidate: constexpr printCommand::printCommand(const printCommand&)
+ class printCommand : public bookCommand{
+       ^~~~~~~~~~~~
+..\src\printCommand.h:7:7: note:   candidate expects 1 argument, 0 provided
+..\src\printCommand.h:7:7: note: candidate: constexpr printCommand::printCommand(printCommand&&)
+..\src\printCommand.h:7:7: note:   candidate expects 1 argument, 0 provided
+21:09:45 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\assignment2.o" "..\\src\\assignment2.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" 
+Info: Nothing to build for Project 2
+21:33:39 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\addUpdateCommand.o" "..\\src\\addUpdateCommand.cpp" 
+..\src\addUpdateCommand.cpp: In member function 'virtual void addUpdateCommand::execute()':
+..\src\addUpdateCommand.cpp:14:21: error: 'class phoneBookEntry' has no member named 'getName'
+  if (book.find(temp.getName())){
+                     ^~~~~~~
+..\src\addUpdateCommand.cpp:19:49: error: 'class phoneBookEntry' has no member named 'getName'
+   print("Updating phone book entry for " + temp.getName());
+                                                 ^~~~~~~
+..\src\addUpdateCommand.cpp:22:47: error: 'class phoneBookEntry' has no member named 'getName'
+   print("Adding phone book entry for " + temp.getName());
+                                               ^~~~~~~
+21:34:54 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\printCommand.o" "..\\src\\printCommand.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\phoneBook.o" "..\\src\\phoneBook.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\addUpdateCommand.o" "..\\src\\addUpdateCommand.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\assignment2.o" "..\\src\\assignment2.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\phoneBookEntry.o" "..\\src\\phoneBookEntry.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\eraseCommand.o" "..\\src\\eraseCommand.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" 
+21:51:33 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\assignment2.o" "..\\src\\assignment2.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\printCommand.o" "..\\src\\printCommand.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\phoneBook.o" "..\\src\\phoneBook.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\eraseCommand.o" "..\\src\\eraseCommand.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\phoneBookEntry.o" "..\\src\\phoneBookEntry.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\addUpdateCommand.o" "..\\src\\addUpdateCommand.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" 
+21:55:19 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\addUpdateCommand.o" "..\\src\\addUpdateCommand.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\phoneBook.o" "..\\src\\phoneBook.cpp" 
+g++ -o "Project 2.exe" "src\\addUpdateCommand.o" "src\\assignment2.o" "src\\bookCommand.o" "src\\eraseCommand.o" "src\\menuList.o" "src\\phoneBook.o" "src\\phoneBookEntry.o" "src\\printCommand.o" 
+Info: Nothing to build for Project 2
