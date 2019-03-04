@@ -20,7 +20,7 @@ phoneBookEntry::phoneBookEntry(const phoneBookEntry &from){
 	emailVal = from.emailVal;
 }
 
-std::string phoneBookEntry::name() const{ // @suppress("Ambiguous problem")
+std::string phoneBookEntry::name() const{
 	return nameVal;
 }
 

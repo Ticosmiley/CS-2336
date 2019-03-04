@@ -10,7 +10,7 @@ phoneBook::phoneBook(){
 void phoneBook::insert(const phoneBookEntry &entry){
 	bool found = false;
 	for (unsigned int i = 0; i < phoneBookList.size(); i++){
-		if (phoneBookList.at(i).name() == entry.name()){ // @suppress("Ambiguous problem")
+		if (phoneBookList.at(i).name() == entry.name()){
 			phoneBookList.at(i) = entry;
 			found = true;
 			break;
@@ -26,7 +26,7 @@ void phoneBook::insert(const std::string &name, const std::string &number, const
 	bool found = false;
 	phoneBookEntry temp(name, number, email);
 	for (unsigned int i = 0; i < phoneBookList.size(); i++){
-		if (phoneBookList.at(i).name() == name){ // @suppress("Ambiguous problem")
+		if (phoneBookList.at(i).name() == name){
 			phoneBookList.at(i) = temp;
 			found = true;
 			break;
@@ -42,7 +42,7 @@ void phoneBook::insert(const std::string &name, const std::string &number){
 	bool found = false;
 	phoneBookEntry temp(name, number);
 	for (unsigned int i = 0; i < phoneBookList.size(); i++){
-		if (phoneBookList.at(i).name() == name){ // @suppress("Ambiguous problem")
+		if (phoneBookList.at(i).name() == name){
 			phoneBookList.at(i) = temp;
 			found = true;
 			break;
@@ -56,7 +56,7 @@ void phoneBook::insert(const std::string &name, const std::string &number){
 
 bool phoneBook::erase(std::string name){
 	for (unsigned int i = 0; i < phoneBookList.size(); i++){
-		if (phoneBookList.at(i).name() == name){ // @suppress("Ambiguous problem")
+		if (phoneBookList.at(i).name() == name){
 			phoneBookList.erase(phoneBookList.begin() + i);
 			return true;
 		}
@@ -66,7 +66,7 @@ bool phoneBook::erase(std::string name){
 
 bool phoneBook::find(std::string name){
 	for (unsigned int i = 0; i < phoneBookList.size(); i++){
-		if (phoneBookList.at(i).name() == name){ // @suppress("Ambiguous problem")
+		if (phoneBookList.at(i).name() == name){
 			return true;
 		}
 	}
@@ -76,15 +76,15 @@ bool phoneBook::find(std::string name){
 void phoneBook::print() const{
 	std::cout << std::left << std::setw(31) << "Name:" << std::setw(16) << "Phone Number:" << "E-Mail:" << std::endl;
 	for (unsigned int i = 0; i < phoneBookList.size(); i++){
-		std::cout << std::setw(31) << phoneBookList.at(i).name() << std::setw(16) << phoneBookList.at(i).phoneNumber() << phoneBookList.at(i).email() << std::endl; // @suppress("Ambiguous problem") // @suppress("Invalid overload")
+		std::cout << std::setw(31) << phoneBookList.at(i).name() << std::setw(16) << phoneBookList.at(i).phoneNumber() << phoneBookList.at(i).email() << std::endl;
 	}
 	return;
 }
 
 void phoneBook::print(std::ostream &out) const{
-	out << std::left << std::setw(31) << "Name:" << std::setw(16) << "Phone Number:" << "E-mail:" << std::endl;
+	out << std::left << std::setw(31) << "Name:" << std::setw(16) << "Phone Number:" << "E-Mail:" << std::endl;
 	for (unsigned int i = 0; i < phoneBookList.size(); i++){
-		out << std::setw(31) << phoneBookList.at(i).name() << std::setw(16) << phoneBookList.at(i).phoneNumber() << phoneBookList.at(i).email() << std::endl; // @suppress("Ambiguous problem") // @suppress("Invalid overload")
+		out << std::setw(31) << phoneBookList.at(i).name() << std::setw(16) << phoneBookList.at(i).phoneNumber() << phoneBookList.at(i).email() << std::endl;
 	}
 	return;
 }
@@ -93,7 +93,7 @@ void phoneBook::debug(std::ostream &out) const{
 	unsigned int i;
 	out << std::left << std::setw(9) << "Index:" << std::setw(31) << "nameVal:" << std::setw(16) << "phoneNumberVal:" << "emailVal:" << std::endl;
 	for (i = 0; i < phoneBookList.size(); i++){
-		out << std::left << std::setw(9) << i << std::setw(31) << phoneBookList.at(i).name() << std::setw(16) << phoneBookList.at(i).phoneNumber() << phoneBookList.at(i).email() << std::endl; // @suppress("Ambiguous problem") // @suppress("Invalid overload")
+		out << std::left << std::setw(9) << i << std::setw(31) << phoneBookList.at(i).name() << std::setw(16) << phoneBookList.at(i).phoneNumber() << phoneBookList.at(i).email() << std::endl;
 	}
 	out << "Total entries: " << i << std::endl;
 	return;

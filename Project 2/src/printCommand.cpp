@@ -5,6 +5,6 @@ printCommand::printCommand(phoneBook &bookIn, std::istream &inStream, std::ostre
 }
 
 void printCommand::execute(){
-	book.print();
+	book.print(out);
 	return;
 }

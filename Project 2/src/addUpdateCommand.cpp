@@ -11,15 +11,15 @@ void addUpdateCommand::execute(){
 	phoneBookEntry temp(name, number, email);
 	bool update = false;
 
-	if (book.find(temp.name())){ // @suppress("Ambiguous problem") // @suppress("Invalid arguments")
+	if (book.find(temp.name())){
 		update = true;
 	}
 
 	if(update){
-		print("Updating phone book entry for " + temp.name()); // @suppress("Ambiguous problem") // @suppress("Invalid arguments")
+		print("Updating phone book entry for " + temp.name());
 	}
 	else{
-		print("Adding phone book entry for " + temp.name()); // @suppress("Ambiguous problem") // @suppress("Invalid arguments")
+		print("Adding phone book entry for " + temp.name());
 	}
 	book.insert(temp);
 

@@ -8,10 +8,10 @@ void eraseCommand::execute(){
 	std::string name = read("Enter name to erase");
 	if(book.find(name)){
 		book.erase(name);
-		print("Phone book entry for " + name + " was erased");
+		print("Phone book entry " + name + " was erased");
 	}
 	else{
-		print("Phone book entry for " + name + " was not erased");
+		print("Phone book entry " + name + " was not erased");
 	}
 
 	return;
